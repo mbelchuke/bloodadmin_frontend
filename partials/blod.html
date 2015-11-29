@@ -1,0 +1,184 @@
+<div class="blod-header">
+    <h1 class="page-header">Blod overblik</h1>
+</div>
+<div class="blod-content">
+
+    <div class="container-fluid">
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div class="row placeholders">
+                    <div class="col-xs-1 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>A RhD positiv</h4>
+                        <span class="text-muted">37%</span>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>B RhD positiv</h4>
+                        <span class="text-muted">8%</span>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>0 RhD positiv</h4>
+                        <span class="text-muted">35%</span>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>A RhD negativ</h4>
+                        <span class="text-muted">7%</span>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>B RhD negativ</h4>
+                        <span class="text-muted">2%</span>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>0 RhD negativ</h4>
+                        <span class="text-muted">6%</span>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>AB RhD positiv</h4>
+                        <span class="text-muted">4%</span>
+                    </div>
+                    <div class="col-xs-1 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <h4>AB RhD negativ</h4>
+                        <span class="text-muted">1%</span>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">Blod statistik</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Dato
+                                <span ng-click="order = 'date'" class="ion-arrow-up-b"></span>
+                                <span ng-click="order = '-date'" class="ion-arrow-down-b"></span>
+                            </th>
+                            <th>A RhD positiv
+                                <span ng-click="order = 'aP'" class="ion-arrow-up-b"></span>
+                                <span ng-click="order = '-aP'" class="ion-arrow-down-b"></span>
+                            </th>
+                            <th>B RhD positiv</th>
+                            <th>0 RhD positiv</th>
+                            <th>A RhD negativ</th>
+                            <th>B RhD negativ</th>
+                            <th>0 RhD negativ</th>
+                            <th>AB RhD positiv</th>
+                            <th>AB RhD negativ</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="blod in blod | orderBy:'date'">
+                            <td>{{blod.date}}</td>
+                            <td>{{blod.aP}}</td>
+                            <td>{{blod.bP}}</td>
+                            <td>{{blod.oP}}</td>
+                            <td>{{blod.aN}}</td>
+                            <td>{{blod.bN}}</td>
+                            <td>{{blod.oN}}</td>
+                            <td>{{blod.abP}}</td>
+                            <td>{{blod.abN}}</td>
+                        </tr>
+                        <tr>
+                            <td>03-03-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>17-04-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>29-05-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>01-07-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>03-08-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>19-09-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>04-10-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        <tr>
+                            <td>24-11-2015</td>
+                            <td>2500 l.</td>
+                            <td>1000 l.</td>
+                            <td>2750 l</td>
+                            <td>950 l.</td>
+                            <td>200 l.</td>
+                            <td>550 l.</td>
+                            <td>400 l.</td>
+                            <td>100 l.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="blod-footer">
+    Copyrigth 2015 | Tenna Ørum, David Dunning
+</div>

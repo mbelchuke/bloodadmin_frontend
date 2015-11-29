@@ -1,0 +1,268 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: rgba(0,0,0,0.5); /*dim the background*/
+  }
+
+    .overlay div {
+        margin-left:auto;
+        margin-right:auto;
+        width:75px;
+        margin-top:250px;
+    }
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+
+.nav {
+    padding-left: 0;
+    list-style: none;
+}
+
+.side-nav {
+    position: fixed;
+    top: 51px;
+    left: 0px;
+    width: 150px;
+    overflow-y: auto;
+    background-color: white;
+    bottom: 0;
+    oveflow-x: hidden;
+    padding-bottom: 40px;
+    border-right: 1px solid #e1e1e1;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-inverse, .navbar-collapse, .navbar-form {
+    border-color: darkcyan !important;
+}
+
+.navbar-fixed-top, .navbar-collapse, .navbar-fixed-bottom, {
+    max-height: 340px;
+}
+
+.navbar-fixed-top, .navbar-collapse, .navbar-static-top, .navbar-collapse, .navbar-fixed-bottom, .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+.navbar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px;
+    font-family: Calibri;
+    font-size: 2em !important;
+}
+
+.navbar-inverse, .navbar-brand {
+    color: white !important;
+}
+
+.navbar-inverse, .navbar-nav>li>a {
+    color: black !important;
+}
+
+.nav>li>a:focus,.nav>li>a:hover{text-decoration:none;background-color:#017A7A} {
+    color: #017A7A !important;
+}
+
+.nav .open>a,.nav .open>a:focus,.nav .open>a:hover{background-color:#017A7A;border-color:#337ab7} {
+    color: #017A7A !important;
+}
+
+.navbar {
+    height: 50px;
+    background-color: darkcyan;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: white;
+    font-size: 1.6em;
+}
+
+.ion-android-home:before, .ion-person-stalker:before, .ion-android-calendar:before{
+    padding: 5px;
+}
+
+.ion-waterdrop {
+    padding: 5px;
+    color: darkred;
+}
+
+.header, .blod-header, .nydonor-header, .editDonorHeader {
+    padding-top: 75px;
+    padding-left: 180px;
+    text-align: center;
+    text-shadow: 1px 1px lightgrey;
+}
+
+.left-content, .blod-content, .nydonor-content, .editDonorContent {
+    padding-top: 0px;
+    padding-left: 180px;
+    text-align: center;
+    padding-right:30px;
+}
+
+.sub-header {
+    padding-left: 180px;
+    text-align: center;
+}
+
+@media(min-width: 500px) {
+    .nydonor-content, .editDonorContent {
+        text-align: left !important;
+    }
+}
+
+.footer, .blod-footer, .nydonor-footer, .editDonorFooter {
+    padding-left: 180px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.searchField {
+    margin: 5px 5px;
+    height: 40px;
+    box-shadow: 0 0 0 1px #EEE;
+    font-style: oblique;
+}
+
+.btn-primary {
+    background-color: darkcyan !important;
+    border-color: darkcyan !important;
+    height: 40px;
+    box-shadow: 0 0 0 1px #EEE;
+    font-weight: bold;
+}
+
+.searchbtn {
+    min-width: 110px;
+    padding: 10px 10px;
+    margin: 5px 5px;
+}
+
+.newbtn {
+    min-width: 110px;
+    padding: 10px 10px;
+    margin: 5px 5px;
+}
+
+.box-wrap {
+    border-radius: 5px;
+    background: #FFF;
+    border-bottom: solid 3px #DDD;
+    box-shadow: 0 0 0 1px #EEE;
+}
+
+.box-heading {
+    background-color: #FAFAFA;
+    padding: 15px;
+    border-bottom: solid 1px #ccc;
+    border-radius: 5px 5px 0 0;
+}
+
+.box-heading h4 {
+    margin: 0;
+}
+
+.ion-stats-bar {
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat;
+    margin-top: 0;
+}
+
+.box-inner {
+    padding: 15px;
+}
+
+@media (min-width: 1200px) {
+    .row-fluid {
+        width: 100%;
+    }
+}
+
+.flot-base {
+    width: 378px;
+    height: 150px;
+    direction: ltr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 378px;
+    height: 150px;
+}
+
+.flot-overlay {
+    direction: ltr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 378px;
+    height: 150px;
+}
+
+.legend {
+    position: absolute;
+    width: 54px;
+    height: 110px;
+    top: 15px;
+    right: -30px;
+    opacity: 0.85;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.table{
+    margin-top: 20px;
+    text-align: left !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input{
+    min-width: 150px;
+    max-width: 500px;
+}
+
+.nydonor-content>input {
+    padding: 5px;
+}
+

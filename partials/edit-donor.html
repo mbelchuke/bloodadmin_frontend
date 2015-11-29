@@ -1,0 +1,48 @@
+<div class="editDonorHeader" ng-controller="DonorerEditCtrl">
+    <h3>{{donor.firstname}}</h3>
+</div>
+
+<div class="editDonorContent" ng-controller="DonorerEditCtrl">
+    <div class="col-lg-12">
+        <div class="col-lg-2">
+            <label>Fornavn:</label>
+        </div>
+        <div class="col-lg-10">
+            <input class="input form-control" type="text" name="firstname" value="{{donor.firstname}}">
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="col-lg-2">
+            <label>Efternavn:</label>
+        </div>
+        <div class="col-lg-10">
+            <input class="input form-control" type="text" name="lastname" value="{{donor.lastname}}">
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="col-lg-2">
+            <label>Køn:</label>
+        </div>
+        <div class="col-lg-10">
+            <input class="input form-control" type="text" name="sex" value="{{donor.sex}}">
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="col-lg-2">
+            <label>Fødselsdag:</label>
+        </div>
+        <div class="col-lg-10">
+            <input class="input form-control" type="text" name="age" value="{{donor.age}}">
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <button type="submit" ngClick="Submit" class="btn btn-primary pull-right">
+            Gem
+        </button>
+    </div>
+</div>
+
+
+<div class="editDonorFooter">
+    Copyrigth 2015 | Tenna Ørum, David Dunning
+</div>

@@ -1,0 +1,67 @@
+<div class="header">
+    <h3>DonorView</h3>
+</div>
+
+<div class="left-content">
+
+    <div class="form-group">
+<table>
+	<tr>
+		<td rowspan="5" class="user_img"><img src="./media/img/male.png" width="300px" /></td>
+		<td></td>
+		<td class="user_table_info">
+			<table style="width:100%">
+				<tr>
+					<td style="width:49%"><strong>Navn</strong></td>
+					<td></td>
+					<td style="width:49%"><strong>Blodtype</strong></td>
+				</tr>
+				<tr>
+					<td><input class="form-control" type="text" value="{{donor.firstname}} {{donors.lastname}}" readonly/></td>
+					<td></td>
+					<td><input class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" type="text" value="{{donors.bloodtype}}" readonly/></td>
+				</tr>
+				<tr class="seperator"></tr>
+				<tr>
+					<td><strong>Alder</strong></td>
+					<td></td>
+					<td><strong>Email</strong></td>
+				</tr>
+				<tr>
+					<td><input class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" type="text" value="{{donors.age}}" readonly/></td>
+					<td></td>
+					<td>
+						<input class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" type="text" value="{{donors.email}}" readonly/>
+					</td>
+				</tr>
+				<tr class="seperator"></tr>
+				<tr>
+				<tr>
+					<td><strong>Køn</strong></td>
+					<td></td>
+					<td><strong></strong></td>
+				</tr>
+				<tr>
+					<td><input class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" type="text" value="{{donors.sex}}" readonly/></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="seperator"></tr>
+				<tr>
+					<td colspan="3" class="userstory">
+        					<div class="text">{{donors.userstory}}</div>
+        			</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>
+<button class="btn btn-success" type="button">Opret ny blodprøve</button>
+<button class="btn btn-info" type="button">Rediger donor</button>
+<button class="btn btn-danger" type="button">Slet donor</button>
+
+
+
+
+ </div>
