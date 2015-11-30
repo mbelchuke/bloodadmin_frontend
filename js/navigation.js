@@ -21,6 +21,12 @@ angular.module("DonorApp").config(
             controller: "BlodCtrl"
         });
 
+        $stateProvider.state("calendar", {
+            url: "/kalender",
+            templateUrl: "partials/calendar.html",
+            controller: "CalendarCtrl"
+        });
+
         $stateProvider.state("ny-donor", {
             url: "/ny-donor",
             templateUrl: "partials/ny-donor.html",
