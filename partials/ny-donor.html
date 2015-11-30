@@ -3,10 +3,11 @@
 </div>
 <div class="left-content">
  <div ng-controller="DonorerCtrl">
-  <form id="saveDonor" ng-submit="newDonor()">
+  <form name="newDonor" id="saveDonor" ng-submit="newDonor()">
     <div class="form-group">
         <label>Fornavn</label>
         <input type="text" name="firstname" class="form-control" ng-model="donor.firstname">
+        <span style="color:red" ng-show=""
     </div>
     <div class="form-group">
         <label>Efternavn</label>
