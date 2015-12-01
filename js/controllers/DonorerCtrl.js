@@ -7,15 +7,21 @@ angular.module("DonorApp", ['ui.router', 'ngResource']).controller("DonorerCtrl"
             }
         );
 
-        $scope.newDonor = function () {
-            $.ajax({
-                type: 'POST',
-                url: 'http://bloodadmin.cloudapp.net/api/donors',
-                data: $('#saveDonor').serialize(),
-                success: function (response) {
-                    $state.go("donorer");
-                }
-            });
+        $scope.newDonor = function (valid) {
+
+            if (valid) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://bloodadmin.cloudapp.net/api/donors',
+                    data: $('#saveDonor').serialize(),
+                    success: function (response) {
+                        $state.go("donorer");
+                    }
+                });
+            } else {
+                console.log("invalid form!")
+            }
+
         };
 
         $scope.deleteDonor = function (id) {

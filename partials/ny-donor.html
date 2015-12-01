@@ -3,41 +3,113 @@
 </div>
 <div class="left-content">
  <div ng-controller="DonorerCtrl">
-  <form id="saveDonor" ng-submit="newDonor()" name="newDonorForm">
+  <form id="saveDonor" name="newDonorForm" ng-submit="newDonor(newDonorForm.$valid)"  novalidate="novalidate">
 
-    <div class="form-group">
+    <div class="form-group" ng-class="
+    {
+    'has-error':!newDonorForm.firstname.$valid && (!newDonorForm.firstname.$pristine || newDonorForm.$submitted),
+    'has-success':newDonorForm.firstname.$valid && (!newDonorForm.firstname.$pristine || newDonorForm.$submitted)
+    }
+    ">
         <label>Fornavn</label>
-        <input type="text" name="firstname" class="form-control" ng-model="donor.firstname" required>
+        <input type="text"
+               name="firstname"
+               class="form-control"
+               ng-model="donor.firstname"
+               required>
+        <p class="help-block" ng-show="newDonorForm.firstname.$error.required && (!newDonorForm.firstname.$pristine || newDonorForm.$submitted)">
+            Du skal indtaste et navn!
+        </p>
+
     </div>
 
-    <div class="form-group">
+    <div class="form-group" ng-class="
+    {
+    'has-error': !newDonorForm.lastname.$valid && (!newDonorForm.lastname.$pristine || newDonorForm.$submitted),
+    'has-success': newDonorForm.lastname.$valid && (!newDonorForm.lastname.$pristine || newDonorForm.$submitted)
+    }
+    ">
         <label>Efternavn</label>
-        <input type="text" name="lastname" class="form-control" ng-model="donor.lastname" required>
+        <input type="text"
+               name="lastname"
+               class="form-control"
+               ng-model="donor.lastname"
+               required>
+        <p class="help-block" ng-show="newDonorForm.lastname.$error.required && (!newDonorForm.lastname.$pristine || newDonorForm.$submitted)">
+            Du skal indtaste et efternavn!
+        </p>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" ng-class="
+    {
+    'has-error': !newDonorForm.age.$valid && (!newDonorForm.age.$pristine || newDonorForm.$submitted),
+    'has-success': newDonorForm.age.$valid && (!newDonorForm.age.$pristine || newDonorForm.$submitted)
+    }
+    ">
         <label>Alder</label>
-        <select id='mySelect' name="age" class="form-control" ng-model="donor.age">
+        <select id='mySelect'
+                name="age"
+                class="form-control"
+                ng-model="donor.age"
+                required>
           <option ng-repeat="item in ageData" value="{{item}}">{{item}}</option>
-            </select> 
+            </select>
+        <p class="help-block" ng-show="newDonorForm.age.$error.required && (!newDonorForm.age.$pristine || newDonorForm.$submitted)">
+            Du skal vælge din alder!
+        </p>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" ng-class="
+    {
+    'has-error': !newDonorForm.sex.$valid && (!newDonorForm.sex.$pristine || newDonorForm.$submitted),
+    'has-success': newDonorForm.sex.$valid && (!newDonorForm.sex.$pristine || newDonorForm.$submitted)
+    }
+    ">
         <label>Køn</label>
-        <select id='sexSelect' name="sex" class="form-control" ng-model="donor.sex">
+        <select id='sexSelect'
+                name="sex"
+                class="form-control"
+                ng-model="donor.sex"
+                required>
           <option value="Mand">Mand</option>
           <option value="Kvinde">Kvinde</option>
-        </select>     
+        </select>
+        <p class="help-block" ng-show="newDonorForm.sex.$error.required && (!newDonorForm.sex.$pristine || newDonorForm.$submitted)">
+            Du skal vælge dit køn!
+        </p>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" ng-class="
+    {
+    'has-error': !newDonorForm.email.$valid && (!newDonorForm.email.$pristine || newDonorForm.$submitted),
+    'has-success': newDonorForm.email.$valid && (!newDonorForm.email.$pristine || newDonorForm.$submitted)
+    }
+    ">
       <label>Email</label>
-        <input type="text" name="email" class="form-control" ng-model="donor.email" required>
+        <input type="email"
+               name="email"
+               class="form-control"
+               ng-model="donor.email"
+               required>
+        <p class="help-block" ng-show="newDonorForm.email.$error.required && (!newDonorForm.email.$pristine || newDonorForm.$submitted)">
+            Du skal indtaste din e-mail!
+        </p>
+        <p class="help-block" ng-show="newDonorForm.email.$error.email && (!newDonorForm.email.$pristine || newDonorForm.$submitted)">
+            Du skal indtaste en korrekt e-mail!
+        </p>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" ng-class="
+    {
+    'has-error': !newDonorForm.bloodtype.$valid && (!newDonorForm.bloodtype.$pristine || newDonorForm.$submitted),
+    'has-success': newDonorForm.bloodtype.$valid && (!newDonorForm.bloodtype.$pristine || newDonorForm.$submitted)
+    }
+    ">
         <label>Blodtype</label>
-        <select name="bloodtype" class="form-control" ng-model="donor.bloodtype">
+        <select name="bloodtype"
+                class="form-control"
+                ng-model="donor.bloodtype"
+                required>
             <option value="O+">O+</option>   
             <option value="O-">O-</option>
             <option value="A+">A+</option>   
@@ -47,10 +119,14 @@
             <option value="AB+">AB+</option>   
             <option value="AB-">AB-</option>
         </select>
+        <p class="help-block" ng-show="newDonorForm.bloodtype.$error.required && (!newDonorForm.bloodtype.$pristine || newDonorForm.$submitted)">
+            Du skal vælge din blodtype!
+        </p>
     </div>
-              <input class="btn btn-primary" type="submit" ngClick="Submit">
+              <input class="btn btn-primary" value="Tilføj ny donor" type="submit" ngClick="Submit">
 
     </form>
+
 </div>
 
 <!--<form  class="nydonor-content" novalidate name="visitForm" >
